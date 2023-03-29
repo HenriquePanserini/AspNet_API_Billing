@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "8sIPYmN2aZXPmvITWuVcQ9wWG4l4DFhZ1jFq+APXMnI=",
+  "Source": "AspNet_API_App",
+  "BasePath": "_content/AspNet_API_App",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

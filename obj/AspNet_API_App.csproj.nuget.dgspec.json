@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rick4\\Documents\\AspNet_API_App\\AspNet_API_App.csproj": {}
+    "c:\\Users\\rick4\\Documents\\AspNet_API_App\\AspNet_API_App.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rick4\\Documents\\AspNet_API_App\\AspNet_API_App.csproj": {
+    "c:\\Users\\rick4\\Documents\\AspNet_API_App\\AspNet_API_App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rick4\\Documents\\AspNet_API_App\\AspNet_API_App.csproj",
+        "projectUniqueName": "c:\\Users\\rick4\\Documents\\AspNet_API_App\\AspNet_API_App.csproj",
         "projectName": "AspNet_API_App",
-        "projectPath": "C:\\Users\\rick4\\Documents\\AspNet_API_App\\AspNet_API_App.csproj",
+        "projectPath": "c:\\Users\\rick4\\Documents\\AspNet_API_App\\AspNet_API_App.csproj",
         "packagesPath": "C:\\Users\\rick4\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rick4\\Documents\\AspNet_API_App\\obj\\",
+        "outputPath": "c:\\Users\\rick4\\Documents\\AspNet_API_App\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rick4\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -41,6 +41,22 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[7.0.4, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

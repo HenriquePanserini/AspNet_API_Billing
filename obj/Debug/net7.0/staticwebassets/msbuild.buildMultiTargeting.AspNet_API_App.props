@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\AspNet_API_App.props" />
+</Project>
