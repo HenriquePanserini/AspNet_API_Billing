@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using AspNet_API_App.Models;
 using AspNet_API_App.Data;
 using AspNet_API_App.Repositories.Services;
@@ -15,25 +16,50 @@ public class UserService : IUserService
 
     public async Task<List<User>> GetAllUsers()
     {
-        throw new NotImplementedException();
+        return await _data.Users.ToListAsync();
     }
 
-    public Task<User> GetUserById(int id)
+    public async Task<User> GetUserById(int id)
     {
-        throw new NotImplementedException();
-    }
-    public Task<User> AddUser(User user)
-    {
-        throw new NotImplementedException();
+        return await _data.Users.FirstOrDefaultAsync(u => u.Id == id);
     }
 
-    public Task<bool> DeleteUser(int id)
+    public async Task<User> AddUser(User user)
     {
-        throw new NotImplementedException();
+        await _data.Users.AddAsync(user);
+        await _data.SaveChangesAsync();
+
+        return user;
     }
 
-    public Task<User> UpdateUser(int id, User user)
+    public async Task<bool> DeleteUser(int id)
     {
-        throw new NotImplementedException();
+        User userSearch = await GetUserById(id);
+
+        if(userSearch == null){
+            throw new ArgumentException($"User {id} not found");
+        }
+
+        _data.Users.Remove(userSearch);
+        await _data.SaveChangesAsync();
+
+        return true;
+    }
+
+    public async Task<User> UpdateUser(int id, User user)
+    {
+        User userSearch = await GetUserById(id);
+
+        if(userSearch == null){
+            throw new Exception($"User {id} does not exist");
+        }
+
+        userSearch.Name = user.Name;
+        userSearch.Email = user.Email;
+
+        _data.Users.Update(userSearch);
+        await _data.SaveChangesAsync();
+
+        return userSearch;
     }
 }
